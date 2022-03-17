@@ -1,0 +1,126 @@
+commit 5ddd281a9aedd84bf3b7bd670b6a8832c3f899c6  
+Author: Max Leikas <max.leikas@helsinki.fi>  
+Date:   Thu Mar 17 22:17:17 2022 +0200  
+ 
+   poisto ja nimen muutos  
+ 
+tiedostoja/file2             | 0  
+tiedostoja/{file1 => file22} | 0  
+2 files changed, 0 insertions(+), 0 deletions(-)  
+ 
+commit 89cbb0fcbd613924bbe22146ae8c22b57b23ecf7  
+Author: Max Leikas <max.leikas@helsinki.fi>  
+Date:   Thu Mar 17 22:16:31 2022 +0200  
+ 
+   vahinko  
+ 
+file1 | 0  
+file2 | 0  
+file3 | 0  
+3 files changed, 0 insertions(+), 0 deletions(-)  
+ 
+commit 77b2a97e684dc2364930ab999af7bd1aaa29622b  
+Author: Max Leikas <max.leikas@helsinki.fi>  
+Date:   Thu Mar 17 22:12:55 2022 +0200  
+ 
+   tiedostoja yritys 2  
+ 
+tiedostoja/file1 | 0  
+tiedostoja/file2 | 0  
+tiedostoja/file3 | 0  
+3 files changed, 0 insertions(+), 0 deletions(-)  
+ 
+commit e25672b12c2cf056e188d1eee18f5dd1b4bb0e34  
+Author: Max Leikas <max.leikas@helsinki.fi>  
+Date:   Thu Mar 17 22:11:21 2022 +0200  
+ 
+   tiedostoja  
+ 
+file1 | 0  
+file2 | 0  
+file3 | 0  
+3 files changed, 0 insertions(+), 0 deletions(-)  
+ 
+commit 38656496bc0c0d67f60dd0aea1a9c03fe0bfb824  
+Author: Max Leikas <max.leikas@helsinki.fi>  
+Date:   Thu Mar 17 22:04:35 2022 +0200  
+ 
+   eka ja kolmas  
+ 
+eka.txt    | 4 +++-  
+kolmas.txt | 1 +  
+2 files changed, 4 insertions(+), 1 deletion(-)  
+ 
+commit e24d47673638140ff69397fb947b4ec59a0be854  
+Author: Max Leikas <max.leikas@helsinki.fi>  
+Date:   Thu Mar 17 22:03:12 2022 +0200  
+ 
+   uudelleennimentä  
+ 
+tiedosto.txt => eka.txt | 0  
+1 file changed, 0 insertions(+), 0 deletions(-)  
+ 
+commit 9911f42bd3fced0560e9ed44c1280e099a36c8aa  
+Author: Max Leikas <max.leikas@helsinki.fi>  
+Date:   Thu Mar 17 22:02:09 2022 +0200  
+ 
+   poisto  
+ 
+toinen.txt | 0  
+1 file changed, 0 insertions(+), 0 deletions(-)  
+ 
+commit c85ff69d3ba3784fb7eadcd0fa8abffb53106063  
+Author: Max Leikas <max.leikas@helsinki.fi>  
+Date:   Thu Mar 17 22:00:08 2022 +0200  
+ 
+   sheeshman  
+ 
+tiedosto.txt | 2 +-  
+1 file changed, 1 insertion(+), 1 deletion(-)  
+ 
+commit 4b568a886e05011fde6a9eb5f6acc201aee90ddc  
+Author: Max Leikas <max.leikas@helsinki.fi>  
+Date:   Thu Mar 17 21:58:57 2022 +0200  
+ 
+   gabagoo  
+ 
+tiedosto.txt | 2 ++  
+1 file changed, 2 insertions(+)  
+ 
+commit cfa82e9e5edc4b638c30bf01adf57ea1c097614e  
+Author: Max Leikas <max.leikas@helsinki.fi>  
+Date:   Thu Mar 17 21:50:12 2022 +0200  
+ 
+   jokin tiedosto  
+ 
+stuff/jokintiedosto.txt | 0  
+1 file changed, 0 insertions(+), 0 deletions(-)  
+ 
+commit a7e786ae83e7ebb5cc06ddf65f7bc3a933321d16  
+Author: Max Leikas <max.leikas@helsinki.fi>  
+Date:   Thu Mar 17 21:49:12 2022 +0200  
+ 
+   kolmas  
+ 
+kolmas.txt | 0  
+1 file changed, 0 insertions(+), 0 deletions(-)  
+ 
+commit 5b0d531007d4eb158fec197544281d9291d84393  
+Author: Max Leikas <max.leikas@helsinki.fi>  
+Date:   Thu Mar 17 21:46:08 2022 +0200  
+ 
+   muutos ja lisäys  
+ 
+tiedosto.txt | 1 +  
+toinen.txt   | 0  
+2 files changed, 1 insertion(+)  
+ 
+commit 41d10c2fb3fe19c861eb9e85095a263fb1fe792c  
+Author: Max Leikas <max.leikas@helsinki.fi>  
+Date:   Thu Mar 17 21:09:12 2022 +0200  
+ 
+   tiedosto.txt luotu  
+ 
+tiedosto.txt | 0  
+1 file changed, 0 insertions(+), 0 deletions(-) 
+ 
