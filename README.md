@@ -5,6 +5,7 @@
 - [Changelog](./dokumentaatio/changelog.md)
 - [Tuntikirjanpito](./dokumentaatio/tuntikirjanpito.md)
 - [Vaatimusmäärittely](./dokumentaatio/vaatimusmaarittely.md)
+- [Arkkitehtuurikuvaus](./dokumentaatio/arkkitehtuuri.md)
 
 ## Asennus
 
@@ -36,3 +37,10 @@ poetry run invoke test
 poetry run invoke coverage-report
 ```
 
+### Pylint
+
+Tiedoston [.pylintrc](./.pylintrc) tarkastukset tehdään komennolla:
+
+```bash
+poetry run invoke lint
+```
