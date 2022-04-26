@@ -1,5 +1,5 @@
 import unittest
-from main import generaterandom
+from main import Yatzy, Dice, Scores, UpdateScore
 class TestDice(unittest.TestCase):
     def setup(self):
         print("ermm yeah")
