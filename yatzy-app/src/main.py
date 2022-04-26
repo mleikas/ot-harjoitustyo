@@ -86,7 +86,7 @@ class Yatzy(TK.Frame):
                 bonus = 0
             bottom_score = sum([self.scores[i] for i in scorelist[6:]])
             total = top_score + bonus + bottom_score
-            message1 = f"Yläpisteet: {top_score}\n Bonus: {bonus}\n Alapisteet: {bottom_score}\n Kokonaispisteet: {total}"
+            message1 = f"Vasemman puolen pisteet: {top_score}\n Bonus: {bonus}\n Oikean puolen pisteet: {bottom_score}\n Kokonaispisteet: {total}"
             TK.messagebox.showinfo(title="Peli loppui!", message=message1)
 
     def update_score(self):
@@ -131,7 +131,7 @@ class Scores(TK.Frame):
         if name == 4:
             text = "Neloset"
         if name == 5:
-            text = "Vitoset"
+            text = "Viitoset"
         if name == 6:
             text = "Kuutoset"
         self.name = name
@@ -176,9 +176,9 @@ class UpdateScore(TK.Frame):
         self.var_bonus.set(0)
         self.var_sum_score = TK.IntVar()
         self.var_sum_score.set(self.master.top_score+self.master.bottom_score+self.var_bonus.get())
-        TK.Label(self, text="Yläpisteet").pack(side="top")
+        TK.Label(self, text="Vasemman puolen pisteet").pack(side="top")
         TK.Label(self, textvar=self.var_top_score).pack(side="top")
-        TK.Label(self, text="Alapisteet").pack(side="top")
+        TK.Label(self, text="Oikean puolen pisteet").pack(side="top")
         TK.Label(self, textvar=self.var_bottom_score).pack(side="top")
         TK.Label(self, text="Kokonaispisteet").pack(side="top")
         TK.Label(self, textvar=self.var_sum_score).pack(side="top")
