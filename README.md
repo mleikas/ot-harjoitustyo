@@ -9,12 +9,12 @@
 
 ## Asennus
 
-1. Riippuvuuksien asentamiseen käytä komentoa "yatzy-app" repositorion sisällä: 
+1. Riippuvuuksien asentamiseen käytä "yatzy-app" repositorion sisällä komentoa: 
 ```bash
 poetry install
 ```
 
-2. Ohjelman aloittamiseen käytä komentoa:
+2. Ohjelman aloittamiseen käytä "yatzy-app" repositorion sisällä komentoa:
 ```bash
 poetry run invoke start
 ```
@@ -39,7 +39,7 @@ poetry run invoke coverage-report
 
 ### Pylint
 
-Tiedoston [.pylintrc](./.pylintrc) tarkastukset tehdään komennolla:
+Tiedoston [.pylintrc](./.pylintrc) tarkastukset tehdään "yatzy-app" repositorion sisällä komennolla:
 
 ```bash
 poetry run invoke lint
