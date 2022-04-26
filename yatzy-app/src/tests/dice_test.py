@@ -1,8 +1,8 @@
 import unittest
-from main import Yatzy, Dice, Scores, UpdateScore
+from import class_yatzy, class_dice, class_scores, class_updatescore
 class TestDice(unittest.TestCase):
     def setup(self):
-        print("ermm yeah")
+        self.remaining_rolls = 1
 
-    def test_dice_generate_five_numbers(self):
-        self.assertEqual(len(generaterandom()), 5)
+    def test_dice(self):
+        self.assertEqual(Yatzy.roll, None)
