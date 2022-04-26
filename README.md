@@ -9,7 +9,7 @@
 
 ## Asennus
 
-1. Riippuvuuksien asentamiseen käytä komentoa: 
+1. Riippuvuuksien asentamiseen käytä komentoa "yatzy-app" repositorion sisällä: 
 ```bash
 poetry install
 ```
