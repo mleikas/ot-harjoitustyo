@@ -2,24 +2,27 @@ import tkinter as TK
 import random
 
 top_list = [1,2,3,4,5,6]
-
+teksti = ["-","Ykköset","Kakkoset","Kolmoset","Neloset","Viitoset","Kuutoset"]
 class Scores(TK.Frame):
+    """Luokka, jonka avulla hoidetaan painikkeet pisteiden saantia varten
+    
+    Attributes:
+        score: Pisteiden määrä
+        name: Painikkeen nimi
+    """
+
     def __init__(self, master, name, score=None):
+        """Luokan konstruktori, joka luo painikkeen pisteille ja pistemuuttujan, joka pitää kirjaa painikkeen pisteistä
+        
+        Args:
+            score: Pisteiden määrä
+            name: Painikkeen nimi
+        """
         self.master = master
         TK.Frame.__init__(self, master)
         text = name
-        if name == 1:
-            text = "Ykköset"
-        if name == 2:
-            text = "Kakkoset"
-        if name == 3:
-            text = "Kolmoset"
-        if name == 4:
-            text = "Neloset"
-        if name == 5:
-            text = "Viitoset"
-        if name == 6:
-            text = "Kuutoset"
+        if name in top_list:
+            text = teksti[name]
         self.name = name
         self.score = score
         self.var_score = TK.IntVar()
@@ -29,6 +32,11 @@ class Scores(TK.Frame):
         self.label.pack(side="left")
     
     def press(self):
+        """Painikketta painaessa tallentaa saadut pisteet ja muuttaa painikkeen väriä
+        
+        Lisäksi, jos kaikki painikkeet ovat painettu, peli loppuu
+    
+        """
         if self.score is None and 0 not in [i.number.get() for i in self.master.dice]:
             self.master.scores[self.name] = self.master.temp_scores[self.name]
             self.score = self.master.temp_scores[self.name]
@@ -45,7 +53,5 @@ class Scores(TK.Frame):
             self.master.update_score()
             self.master.remaining_rolls = 3
 
-            if None in self.master.scores.values():
-                pass
-            else:
+            if None not in self.master.scores.values():
                 self.master.game_over()

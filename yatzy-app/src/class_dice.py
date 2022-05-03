@@ -1,7 +1,15 @@
 import tkinter as TK
 
 class Dice(TK.Frame, TK.Checkbutton):
+    """Luokka, jonka avulla määritetään nopat. 
+    
+    Tähän kuuluu nopan silmäluvun muuttuja ja pidetäänkö noppaa vai ei
+    
+    """
     def __init__(self, master):
+        """Luokan konstruktori, joka luo uuden nopan
+        
+        """
         self.master = master
         TK.Frame.__init__(self, master)
         self.hold = TK.BooleanVar()

@@ -1,4 +1,5 @@
 import tkinter as TK
+from tkinter import messagebox
 from class_dice import Dice
 from class_scores import Scores
 from class_updatescore import UpdateScore
@@ -8,6 +9,9 @@ dice = ["\u2610","\u2680","\u2681","\u2682","\u2683","\u2684","\u2685"]
 scorelist = [1, 2, 3, 4, 5, 6, "Kolme samaa", "Neljä samaa", "Full House", "Pieni suora", "Suuri suora", "Yatzy", "Sattuma"]
 
 class Yatzy(TK.Frame):
+    """Luokka, joka ylläpitää peliä
+
+    """
     def __init__(self, master):
         TK.Frame.__init__(self, master, bg="#9F561F", borderwidth=50)
         self.master = master
@@ -23,7 +27,9 @@ class Yatzy(TK.Frame):
         for i in scorelist:
             self.temp_scores[i] = 0
         self.remaining_rolls = 3
-
+        self.dice = []
+        for i in range(5):
+            self.dice.append(Dice(self))
         for i, n in enumerate(self.dice):
             n.grid(row=i, column=0, padx=1, pady=1,sticky="E")
             TK.Label(self, font=("Helvetica",30), text="Pidä Noppa").grid(row=i, column=0, padx=1, pady=1,sticky="E")
@@ -43,7 +49,10 @@ class Yatzy(TK.Frame):
         self.updatescore = UpdateScore(self)
         self.updatescore.grid(row=row, column=col+1,sticky="S",pady=10, padx=40)
 
-    def check_scores(self): #Mahdollisesti lisätään pari ja kaksi paria tai sitten pelataan USA:n säännöillä
+    def check_scores(self):
+        """Tarkistetaan, paljonko pisteitä saadaan kierroksen nopista
+
+        """
         for i in scorelist:
             self.temp_scores[i] = 0
         values = []
@@ -70,6 +79,11 @@ class Yatzy(TK.Frame):
             self.temp_scores["Sattuma"] = sum(values)
     
     def roll(self):
+        """Antaa nopille silmäluvut ja päivittää tiedot
+
+        Tarkistaa kuinka monta heittoa jäljellä
+
+        """
         if self.remaining_rolls > 0:
             for i in self.dice:
                 if i.hold.get() or not i.number.get():
@@ -78,8 +92,11 @@ class Yatzy(TK.Frame):
             self.update_dice_art()
             self.remaining_rolls -= 1
     
-    def game_over(self): # Peli ohi vielä työn alla
-        if None in self.scores.values():
+    def game_over(self):
+        """Tuottaa peli loppui viestin pelaajalle
+
+        """
+        if None not in self.scores.values():
             top_score = sum([self.scores[i] for i in scorelist[:6]])
             if top_score >= 63:
                 bonus = 50
@@ -96,10 +113,16 @@ class Yatzy(TK.Frame):
         self.updatescore.var_sum_score.set(self.top_score+self.bottom_score)    
 
     def update_dice_art(self):
+        """Päivittää noppien grafiikat
+
+        """
         for i, n in enumerate(self.dice):
             self.dice_art = TK.Label(self, text=dice[n.number.get()],textvar=dice[n.number.get()],fg="black",bg="#9F561F",font=("Helvetica",75))
             self.dice_art.grid(row=i, column=1)
 
     def __call__(self):
+        """Suorittaa tkinterille annetut käskyt
+
+        """
         self.pack()
         self.mainloop()
