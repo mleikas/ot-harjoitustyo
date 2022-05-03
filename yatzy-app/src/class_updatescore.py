@@ -1,7 +1,14 @@
+"""
+Päivittää käyttöliittymään pisteiden määrän
+"""
+
 import tkinter as TK
-import random
+
 
 class UpdateScore(TK.Frame):
+    """
+    Luokka, joka näyttää ruudulla yläpisteet, alapisteet ja kokonaispisteet
+    """
     def __init__(self, master):
         self.master = master
         TK.Frame.__init__(self, master)

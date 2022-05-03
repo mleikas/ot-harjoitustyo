@@ -12,7 +12,7 @@ Pelin käyttöliittymä käyttää Yatzy, Dice, Scores ja UpdateScore luokkia
 
 ```mermaid
 classDiagram
-Score<|--Dice: silmäluku
+Scores<|--Dice: silmäluku
 Yatzy<|--Dice: *
 Yatzy<|--Scores: *
 Yatzy<|--UpdateScore

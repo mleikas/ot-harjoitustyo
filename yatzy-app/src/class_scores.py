@@ -1,19 +1,21 @@
+"""
+Luokka kombinaatiopainikkeille ja niiden antamille pisteille
+"""
 import tkinter as TK
-import random
 
 top_list = [1,2,3,4,5,6]
 teksti = ["-","Ykköset","Kakkoset","Kolmoset","Neloset","Viitoset","Kuutoset"]
 class Scores(TK.Frame):
     """Luokka, jonka avulla hoidetaan painikkeet pisteiden saantia varten
-    
+
     Attributes:
         score: Pisteiden määrä
         name: Painikkeen nimi
     """
-
     def __init__(self, master, name, score=None):
-        """Luokan konstruktori, joka luo painikkeen pisteille ja pistemuuttujan, joka pitää kirjaa painikkeen pisteistä
-        
+        """Luokan konstruktori, joka luo painikkeen pisteille ja pistemuuttujan,
+        joka pitää kirjaa painikkeen pisteistä
+
         Args:
             score: Pisteiden määrä
             name: Painikkeen nimi
@@ -30,12 +32,12 @@ class Scores(TK.Frame):
         self.button.pack(side="left")
         self.label = TK.Label(self, textvar=self.var_score)
         self.label.pack(side="left")
-    
+
     def press(self):
         """Painikketta painaessa tallentaa saadut pisteet ja muuttaa painikkeen väriä
-        
+
         Lisäksi, jos kaikki painikkeet ovat painettu, peli loppuu
-    
+
         """
         if self.score is None and 0 not in [i.number.get() for i in self.master.dice]:
             self.master.scores[self.name] = self.master.temp_scores[self.name]

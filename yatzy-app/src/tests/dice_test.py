@@ -1,5 +1,7 @@
+# pylint: disable-all
+# pylint: skip-file
 import unittest
-from import class_yatzy, class_dice, class_scores, class_updatescore
+import class_yatzy, class_dice, class_scores, class_updatescore
 class TestDice(unittest.TestCase):
     def setup(self):
         self.remaining_rolls = 1

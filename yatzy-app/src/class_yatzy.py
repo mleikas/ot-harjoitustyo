@@ -1,12 +1,17 @@
+"""
+Pelin luokka
+"""
+
 import tkinter as TK
-from tkinter import messagebox
+import random
 from class_dice import Dice
 from class_scores import Scores
 from class_updatescore import UpdateScore
-import random
+
 
 dice = ["\u2610","\u2680","\u2681","\u2682","\u2683","\u2684","\u2685"]
-scorelist = [1, 2, 3, 4, 5, 6, "Kolme samaa", "Neljä samaa", "Full House", "Pieni suora", "Suuri suora", "Yatzy", "Sattuma"]
+scorelist = [1, 2, 3, 4, 5, 6, "Kolme samaa", "Neljä samaa", "Full House",
+"Pieni suora", "Suuri suora", "Yatzy", "Sattuma"]
 
 class Yatzy(TK.Frame):
     """Luokka, joka ylläpitää peliä
@@ -30,11 +35,13 @@ class Yatzy(TK.Frame):
         self.dice = []
         for i in range(5):
             self.dice.append(Dice(self))
-        for i, n in enumerate(self.dice):
-            n.grid(row=i, column=0, padx=1, pady=1,sticky="E")
-            TK.Label(self, font=("Helvetica",30), text="Pidä Noppa").grid(row=i, column=0, padx=1, pady=1,sticky="E")
+        for i, die in enumerate(self.dice):
+            die.grid(row=i, column=0, padx=1, pady=1,sticky="E")
+            TK.Label(self, font=("Helvetica",30), text="Pidä Noppa").grid(
+                row=i, column=0, padx=1, pady=1,sticky="E")
         self.update_dice_art()
-        TK.Button(self,text="Heitetään noppaa!", font=("Helvetica",30), foreground="green",command=self.roll).grid(row=i+1, column=0, rowspan=2)
+        TK.Button(self,text="Heitetään noppaa!", font=("Helvetica",30),
+            foreground="green",command=self.roll).grid(row=i+1, column=0, rowspan=2)
         row = 0
         col = 1
         self.score_table = []
@@ -70,14 +77,14 @@ class Yatzy(TK.Frame):
             if values.count(i) == 5:
                 self.temp_scores["Yatzy"] = 50
             str_check = "".join(sorted(list(set([str(a) for a in values]))))
-            for i in ["1234","2345","3456"]:
-                if i in str_check:
+            for j in ["1234","2345","3456"]:
+                if j in str_check:
                     self.temp_scores["Pieni suora"] = 15
                     break
             if str_check in ["12345","23456"]:
                 self.temp_scores["Suuri suora"] = 20
             self.temp_scores["Sattuma"] = sum(values)
-    
+
     def roll(self):
         """Antaa nopille silmäluvut ja päivittää tiedot
 
@@ -91,7 +98,7 @@ class Yatzy(TK.Frame):
                 self.check_scores()
             self.update_dice_art()
             self.remaining_rolls -= 1
-    
+
     def game_over(self):
         """Tuottaa peli loppui viestin pelaajalle
 
@@ -104,20 +111,25 @@ class Yatzy(TK.Frame):
                 bonus = 0
             bottom_score = sum([self.scores[i] for i in scorelist[6:]])
             total = top_score + bonus + bottom_score
-            message1 = f"Vasemman puolen pisteet: {top_score}\n Bonus: {bonus}\n Oikean puolen pisteet: {bottom_score}\n Kokonaispisteet: {total}"
+            message1 = f"Vasemman puolen pisteet: {top_score}\n Bonus: \
+            {bonus}\n Oikean puolen pisteet: {bottom_score}\n Kokonaispisteet: {total}"
             TK.messagebox.showinfo(title="Peli loppui!", message=message1)
 
     def update_score(self):
+        """
+        Asettaa pisteet pisteiden päivitystä varten
+        """
         self.updatescore.var_top_score.set(self.top_score)
-        self.updatescore.var_bottom_score.set(self.bottom_score)  
-        self.updatescore.var_sum_score.set(self.top_score+self.bottom_score)    
+        self.updatescore.var_bottom_score.set(self.bottom_score)
+        self.updatescore.var_sum_score.set(self.top_score+self.bottom_score)
 
     def update_dice_art(self):
         """Päivittää noppien grafiikat
 
         """
-        for i, n in enumerate(self.dice):
-            self.dice_art = TK.Label(self, text=dice[n.number.get()],textvar=dice[n.number.get()],fg="black",bg="#9F561F",font=("Helvetica",75))
+        for i, die in enumerate(self.dice):
+            self.dice_art = TK.Label(self, text=dice[die.number.get()],
+            textvar=dice[die.number.get()],fg="black",bg="#9F561F",font=("Helvetica",75))
             self.dice_art.grid(row=i, column=1)
 
     def __call__(self):
