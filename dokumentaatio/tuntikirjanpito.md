@@ -11,4 +11,5 @@
 | 21.4  | 6    | bugien korjaamista ja pelilogiikan jatkamista (nopat ja pisteiden päivitys) |
 | 25.4  | 5    | sama kuin 21.4 |
 | 26.4  | 6    | bugien korjaamista ja peli ohi viestin funktion tekeminen |
+| 3.5   | 5    | Docstring, pylint korjaukset, peli ohi viestin valmiiksi tekeminen |
 | yht   | 44   | | 
