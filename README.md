@@ -1,5 +1,7 @@
 # Yatzy-app
 
+Sovellus on klassikko noppapeli nimeltä Yatzy. Käyttäjä voi käyttöliittymää käyttäen pelata peliä.
+
 ## Dokumentaatio
 
 - [Changelog](./dokumentaatio/changelog.md)
@@ -44,3 +46,7 @@ Tiedoston [.pylintrc](./.pylintrc) tarkastukset tehdään "yatzy-app" repositori
 ```bash
 poetry run invoke lint
 ```
+
+## Releaset
+Releaset löytyvät tästä linkistä:
+https://github.com/mleikas/ot-harjoitustyo/releases
