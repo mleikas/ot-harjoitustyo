@@ -33,12 +33,13 @@ class Yatzy(TK.Frame):
             self.temp_scores[i] = 0
         self.remaining_rolls = 3
         self.dice = []
+        self.receivable_points = TK.StringVar(self, "Saatavat pisteet: -")
         for i in range(5):
             self.dice.append(Dice(self))
         for i, die in enumerate(self.dice):
             die.grid(row=i, column=0, padx=1, pady=1,sticky="E")
             TK.Label(self, font=("Helvetica",30), text="Pidä Noppa").grid(
-                row=i, column=0, padx=1, pady=1,sticky="E")
+                row=i, column=0, padx=5, pady=1,sticky="E")
         self.update_dice_art()
         TK.Button(self,text="Heitetään noppaa!", font=("Helvetica",30),
             foreground="green",command=self.roll).grid(row=i+1, column=0, rowspan=2)
@@ -55,6 +56,8 @@ class Yatzy(TK.Frame):
                 col += 1
         self.updatescore = UpdateScore(self)
         self.updatescore.grid(row=row, column=col+1,sticky="S",pady=10, padx=40)
+        TK.Label(self, text="Pidä Noppa: vihreä pitää nopan, punainen heittää",
+            font=("Helvetica",11)).grid(row=row+5, column=0, padx=1,pady=1)
 
     def check_scores(self):
         """Tarkistetaan, paljonko pisteitä saadaan kierroksen nopista
@@ -71,19 +74,19 @@ class Yatzy(TK.Frame):
             if values.count(i) >= 3:
                 self.temp_scores["Kolme samaa"] = sum(values)
                 if len(set(values)) == 2:
-                    self.temp_scores["Full House"] = 19
+                    self.temp_scores["Full House"] = 25
             if values.count(i) >= 4:
                 self.temp_scores["Neljä samaa"] = sum(values)
             if values.count(i) == 5:
                 self.temp_scores["Yatzy"] = 50
-            str_check = "".join(sorted(list(set([str(a) for a in values]))))
-            for j in ["1234","2345","3456"]:
-                if j in str_check:
-                    self.temp_scores["Pieni suora"] = 15
-                    break
-            if str_check in ["12345","23456"]:
-                self.temp_scores["Suuri suora"] = 20
-            self.temp_scores["Sattuma"] = sum(values)
+        str_check = "".join(sorted(list(set([str(a) for a in values]))))
+        for j in ["1234","2345","3456"]:
+            if j in str_check:
+                self.temp_scores["Pieni suora"] = 30
+                break
+        if str_check in ["12345","23456"]:
+            self.temp_scores["Suuri suora"] = 40
+        self.temp_scores["Sattuma"] = sum(values)
 
     def roll(self):
         """Antaa nopille silmäluvut ja päivittää tiedot
@@ -95,9 +98,27 @@ class Yatzy(TK.Frame):
             for i in self.dice:
                 if i.hold.get() or not i.number.get():
                     i.number.set(random.randrange(1,7))
-                self.check_scores()
+            self.check_scores()
+            self.available_points()
             self.update_dice_art()
             self.remaining_rolls -= 1
+            TK.Label(self, text="Heittoja jäljellä: " + str(self.remaining_rolls),
+            font=("Helvetica",15)).grid(row=5, column=1, sticky="S", padx=20, pady=40)
+
+    def available_points(self):
+        """
+        Vaihtaa saatavien pisteiden numerot
+        """
+        row = 0
+        col = 1
+        for name, points in self.temp_scores.items():
+            self.receivable_points = TK.Label(self, text="Saatavat pisteet: " + str(points),
+            font=("Helvetica",13), width=16)
+            self.receivable_points.grid(row=row+1, column=col+1,sticky="S", padx=10,pady=50)
+            row+=2
+            if row == 6:
+                row = 0
+                col += 1
 
     def game_over(self):
         """Tuottaa peli loppui viestin pelaajalle
@@ -128,7 +149,7 @@ class Yatzy(TK.Frame):
 
         """
         for i, die in enumerate(self.dice):
-            self.dice_art = TK.Label(self, text=dice[die.number.get()],
+            self.dice_art = TK.Label(self, text=dice[die.number.get()], width=2,
             textvar=dice[die.number.get()],fg="black",bg="#9F561F",font=("Helvetica",75))
             self.dice_art.grid(row=i, column=1)
 
