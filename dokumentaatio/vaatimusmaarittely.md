@@ -21,7 +21,7 @@ Pelin voittaja on eniten pisteitä kerännyt pelaaja.
   - Kolme Samaa Silmälukua
   - Neljä Samaa Silmälukua
   - Täyskäsi/Full House (Kolme Samaa Silmälukua ja pari jotain toista)
-  - Pieni Suora (Numerot 1, 2, 3, 4 taí 2, 3, 4, 5 tai 3, 4, 5, 6)
+  - Pieni Suora (Numerot 1, 2, 3, 4 tai 2, 3, 4, 5 tai 3, 4, 5, 6)
   - Suuri Suora (Numerot 1,2,3,4,5 tai 2, 3, 4, 5, 6)
   - Sattuma (Mitä tahansa. Tähän lasketaan silmälukujen summa)
   - Yatzy (Viisi samaa silmälukua. Aina 50 pistettä)
