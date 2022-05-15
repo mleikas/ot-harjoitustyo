@@ -9,6 +9,7 @@ Sovellus on klassikko noppapeli nimeltä Yatzy. Käyttäjä voi käyttöliittym�
 - [Tuntikirjanpito](./dokumentaatio/tuntikirjanpito.md)
 - [Vaatimusmäärittely](./dokumentaatio/vaatimusmaarittely.md)
 - [Arkkitehtuurikuvaus](./dokumentaatio/arkkitehtuuri.md)
+- [Testausdokumentti](./dokumentaatio/testaus.md)
 
 ## Asennus
 
