@@ -4,6 +4,7 @@ Sovellus on klassikko noppapeli nimeltä Yatzy. Käyttäjä voi käyttöliittym�
 
 ## Dokumentaatio
 
+- [Käyttöohje](./dokumentaatio/kayttoohje.md)
 - [Changelog](./dokumentaatio/changelog.md)
 - [Tuntikirjanpito](./dokumentaatio/tuntikirjanpito.md)
 - [Vaatimusmäärittely](./dokumentaatio/vaatimusmaarittely.md)
