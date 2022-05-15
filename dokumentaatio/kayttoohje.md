@@ -20,7 +20,7 @@ Voit pitää haluamasi nopat seuraavalle kierrokselle painamalla nopan vieressä
 Kolmannen heiton sinun täytyy valita jokin kombinaatio, josta saat pisteitä sen mukaan, mitä noppia sinulla on.
 Kombinaatioita ovat seuraavat:
 
-### Yläpuolen kombinaatiot
+### Yläpuolen kombinaatiot/Vasemman puolen kombinaatiot
 - Ykköset: 
 	Kaikki nopat, jossa sinulla on silmälukuna 1.
 - Kakkoset: 
@@ -34,9 +34,9 @@ Kombinaatioita ovat seuraavat:
 - Kuutoset: 
 	Kaikki nopat, jossa sinulla on silmälukuna 6.
 
-Jos sinulla on yläpuolen kombinaatioiden pisteistä yhteensä tai enemmän kuin 63 pelin lopussa, pelaaja saa bonuksen eli 50 extra pistettä.
+Jos pelaajalla on yläpuolen kombinaatioiden pisteistä yhteensä tai enemmän kuin 63 pelin lopussa, pelaaja saa bonuksen eli 50 extra pistettä.
 
-### Alapuolen kombinaatiot
+### Alapuolen kombinaatiot/Oikean puolen kombinaatiot
 - Kolmoisluku: 
 	Kolme samaa silmälukua.
 - Neloisluku: 
