@@ -23,3 +23,9 @@
 - Lisätty peli ohi viesti
 - Pylint korjaukset
 - Docstring dokumentaatio
+
+## VIIKKO 7
+- Pelin viimeistely: saatavat pisteet ja info
+- Funktioiden tekeminen
+- Testien tekeminen
+- Dokumentaation jatkaminen
