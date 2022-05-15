@@ -3,6 +3,7 @@ Pelin luokka
 """
 
 import tkinter as TK
+from tkinter import messagebox
 import random
 from class_dice import Dice
 from class_scores import Scores
@@ -32,10 +33,7 @@ class Yatzy(TK.Frame):
         for i in scorelist:
             self.temp_scores[i] = 0
         self.remaining_rolls = 3
-        self.dice = []
         self.receivable_points = TK.StringVar(self, "Saatavat pisteet: -")
-        for i in range(5):
-            self.dice.append(Dice(self))
         for i, die in enumerate(self.dice):
             die.grid(row=i, column=0, padx=1, pady=1,sticky="E")
             TK.Label(self, font=("Helvetica",30), text="Pidä Noppa").grid(
@@ -101,9 +99,15 @@ class Yatzy(TK.Frame):
             self.check_scores()
             self.available_points()
             self.update_dice_art()
-            self.remaining_rolls -= 1
+            self.remaining_rolls_roll()
             TK.Label(self, text="Heittoja jäljellä: " + str(self.remaining_rolls),
             font=("Helvetica",15)).grid(row=5, column=1, sticky="S", padx=20, pady=40)
+
+    def remaining_rolls_roll(self):
+        """
+        Vähentää jäljellä olevia heittoja
+        """
+        self.remaining_rolls -= 1
 
     def available_points(self):
         """
@@ -111,7 +115,7 @@ class Yatzy(TK.Frame):
         """
         row = 0
         col = 1
-        for name, points in self.temp_scores.items():
+        for points in self.temp_scores.values():
             self.receivable_points = TK.Label(self, text="Saatavat pisteet: " + str(points),
             font=("Helvetica",13), width=16)
             self.receivable_points.grid(row=row+1, column=col+1,sticky="S", padx=10,pady=50)
@@ -131,7 +135,8 @@ class Yatzy(TK.Frame):
             else:
                 bonus = 0
             bottom_score = sum([self.scores[i] for i in scorelist[6:]])
-            total = top_score + bonus + bottom_score
+            total = count_total(top_score, bonus, bottom_score)
+
             message1 = f"Vasemman puolen pisteet: {top_score}\n Bonus: \
             {bonus}\n Oikean puolen pisteet: {bottom_score}\n Kokonaispisteet: {total}"
             TK.messagebox.showinfo(title="Peli loppui!", message=message1)
@@ -159,3 +164,9 @@ class Yatzy(TK.Frame):
         """
         self.pack()
         self.mainloop()
+
+def count_total(top, bonus, bot):
+    """
+    Laskee pisteet yhteen
+    """
+    return top + bonus + bot
