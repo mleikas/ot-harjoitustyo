@@ -4,13 +4,13 @@ Ohjelmaa on testattu automatisoiduin testien avulla unittestillä.
 ## Yksikkö- ja integraatiotestaus
 
 ### Sovelluslogiikka ja luokat
-Kaikki testattava on tiedostossa yatzy_test(./yatzy-app/src/tests/yatzy_test.py).
+Kaikki testattava on tiedostossa [yatzy_test](./yatzy-app/src/tests/yatzy_test.py).
 
 ### Testauskattavuus
 Testauksen haarautumakattavuus on 100%, koska koodissa on sekaisin logiikkaa ja käyttöliittymäkoodia.
 
 ## Järjestelmätestaus
-Sovelluksen järjestelmätestaus on suoritettu manuaalisesti.
+Sovelluksen järjestelmätestaus on tehty manuaalisesti.
 
 ### Asennus ja konfigurointi
 Käyttöohjeen(./dokumentaatio/kayttoohje.md) mukaisesti sovellusta on testattu Linux-ympäristössä.
