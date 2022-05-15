@@ -13,5 +13,6 @@
 | 26.4.  | 6    | bugien korjaamista ja peli ohi viestin funktion tekeminen |
 | 3.5.   | 5    | Docstring, pylint korjaukset, peli ohi viestin valmiiksi tekeminen |
 | 14.5.  | 3   | Saadut pisteet, UI:n info |
-| 15.5  | 5    | Saadut pisteet, pylint, dokumentaatio |
-| yht   | 49   | | 
+| 15.5.  | 5    | Saadut pisteet, pylint, dokumentaatio |
+| 16.5.  | 4   | Dokumentaatio, koodin viimeistely, testit |
+| yht   | 61   | | 
