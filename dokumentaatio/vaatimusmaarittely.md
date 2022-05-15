@@ -18,18 +18,12 @@ Pelin voittaja on eniten pisteitä kerännyt pelaaja.
   - Neloset
   - Viitoset
   - Kuutoset
-  - Kolme Samaa Silmälukua
-  - Neljä Samaa Silmälukua
-  - Täyskäsi (Kolme Samaa Silmälukua ja pari jotain toista)
-  - Pieni Suora (Numerot 1, 2, 3, 4 taí 2, 3, 4, 5 tai 3, 4, 5, 6)
-  - Suuri Suora (Numerot 1,2,3,4,5 tai 2, 3, 4, 5, 6)
+  - Kolme Samaa Silmälukua (Tarvitaan kolme samaa silmälukua, mutta pisteisiin lasketaan kaikki silmäluvut yhteen.)
+  - Neljä Samaa Silmälukua (Tarvitaan neljä samaa silmälukua, mutta pisteisiin lasketaan kaikki silmäluvut yhteen.)
+  - Täyskäsi/Full House (Kolme Samaa Silmälukua ja pari jotain toista. Aina 25 pistettä.)
+  - Pieni Suora (Numerot 1, 2, 3, 4 taí 2, 3, 4, 5 tai 3, 4, 5, 6. Aina 30 pistettä.)
+  - Suuri Suora (Numerot 1,2,3,4,5 tai 2, 3, 4, 5, 6. Aina 40 pistettä.)
   - Sattuma (Mitä tahansa. Tähän lasketaan silmälukujen summa)
   - Yatzy (Viisi samaa silmälukua. Aina 50 pistettä)
-- Peli ohi viesti
-
-## Suunnitellut toiminnallisuudet
 - Pelaaja näkee paljonko pisteitä on mahdollista saada jokaisesta kombinaatiosta sen perusteella, mikä hänen kätensä on heiton aikana
-- Oikeat pistemäärät
-
-## Tunnetut bugit
-- Pelaaja saa joskus vääriä määriä pisteitä kombinaatioista
+- Peli ohi viesti

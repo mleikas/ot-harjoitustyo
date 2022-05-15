@@ -21,41 +21,41 @@ Kolmannen heiton sinun täytyy valita jokin kombinaatio, josta saat pisteitä se
 Kombinaatioita ovat seuraavat:
 
 ### Yläpuolen kombinaatiot
-- Ykköset
+- Ykköset: 
 	Kaikki nopat, jossa sinulla on silmälukuna 1.
-- Kakkoset
+- Kakkoset: 
 	Kaikki nopat, jossa sinulla on silmälukuna 2.
-- Kolmoset
+- Kolmoset: 
 	Kaikki nopat, jossa sinulla on silmälukuna 3.
-- Neloset
+- Neloset: 
 	Kaikki nopat, jossa sinulla on silmälukuna 4.
-- Viitoset
+- Viitoset: 
 	Kaikki nopat, jossa sinulla on silmälukuna 5.
-- Kuutoset
+- Kuutoset: 
 	Kaikki nopat, jossa sinulla on silmälukuna 6.
 
 Jos sinulla on yläpuolen kombinaatioiden pisteistä yhteensä tai enemmän kuin 63 pelin lopussa, pelaaja saa bonuksen eli 50 extra pistettä.
 
 ### Alapuolen kombinaatiot
-- Kolmoisluku
-	Kolme samaa silmälukua
-- Neloisluku
-	Neljä samaa silmälukua
-- Pieni suora
+- Kolmoisluku: 
+	Kolme samaa silmälukua.
+- Neloisluku: 
+	Neljä samaa silmälukua.
+- Pieni suora: 
 	Neljä peräkkäistä silmälukua. Esim. [2, 3, 4, 5]
-- Suuri suora
+- Suuri suora: 
 	Viisi peräkkäistä silmälukua. Esim. [1, 2, 3, 4, 5]
-- Full House
-	Kolme samaa silmälukua ja kaksi jotain muuta silmälukua
-- Yatzy
-	Viisi samaa silmälukua
-- Sattuma
-	Mitkä tahansa silmäluvut nopissa. Näiden pisteet kerätään yhteen
+- Täyskäsi/Full House: 
+	Kolme samaa silmälukua ja kaksi jotain muuta silmälukua.
+- Yatzy: 
+	Viisi samaa silmälukua.
+- Sattuma: 
+	Mitkä tahansa silmäluvut nopissa. Näiden pisteet kerätään yhteen.
 
-Kombinaatiot pidät painamalla kombinaation napiketta
+Kombinaatiot pidät painamalla kombinaation napiketta. Punaisena pidetyt voidaan heittää uudestaan, vihreänä pidetyt pysyvät samoina.
 
 ## Pelin lopetus
 
-Peli loppuu, kun kaikki kombinaatiot ovat käyty
+Peli loppuu, kun kaikki kombinaatiot ovat käyty.
 
-Tämän jälkeen saat viestin, missä näkyvät pisteesi
+Tämän jälkeen saat viestin, missä näkyvät keräämät pisteesi.
